@@ -1,0 +1,242 @@
+<!-- base.html -->
+<!doctype html>
+
+<html>
+<head>
+
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'main/js/jquery-3.4.1.min.js' %}">
+	<link rel="stylesheet" href="{% static 'main/js/sorttable.js' %}">
+
+	<style type="text/css">
+
+		.sidenav {
+				height:100%;
+				width:160px;
+				position: fixed;
+				z-index:1;
+				top:0;
+				left:0;
+				background-color:#111;
+				/*overflow-x: :hidden;*/
+				padding-top:20px;
+			}    
+
+		.sidenav a {
+				padding:12px 8px 0px 16px;
+				text-decoration: none;
+				font-size:25px;
+				color: white; /*#818181*/
+				display:block;
+			}  
+	  
+		.sidenav a:hover{
+				color:#f1f1f1;
+			}
+
+		.sidenav2 {
+			height:20%;
+			width:160px;
+			position:fixed;
+			z-index:1;
+			top:0;
+			right:0;
+			padding-top:20px;
+		}
+
+		.sidenav2 a {
+			padding:12px 8px 0px 16px;
+			text-decoration:none;
+			font-size:15px;
+			display:block;
+		}
+
+		.main{
+				margin-left:10px;
+				padding: 0px 10px;
+			}
+
+		{% block css %}{% endblock %}
+
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #111;
+		}
+
+		li {
+		  display:block;
+		}
+
+		li a, .dropbtn {
+		  display: block;
+		  color: white;
+		  text-align: left;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover, .dropdown:hover .dropbtn {
+		  /*background-color: red;*/
+		}
+
+		li.dropdown {
+		  display: block;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  background-color: #111;
+		  min-width: 160px;
+		  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  color: #818181;
+		  padding: 6px 48px 0px 72px;
+		  text-decoration: none;
+		  font-size:20px;
+		  display: block;
+		  text-align: left;
+		}
+
+		.dropdown-content a:hover {background-color: #111;}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+
+		body {
+			height:100%
+			background-repeat:no-repeat;
+			margin:0;
+			background-attachment: fixed;
+			/*40b6ff, 0071b8*/
+			/*fcfcfc, c9c9c9*/
+			background-image: linear-gradient(#dbfdff, #a6bbbd);
+		}
+
+	</style>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+	<title>{% block title %}Perth Mod Averages{% endblock %}</title>
+
+	{% load staticfiles %}
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+</head>
+ 
+<body>
+	<div class="sidenav">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/{{active_user.username}}">Me</a></li>
+			<li><a href="/FAQ/">FAQ</a></li>
+			{% for subject_name, class_code in subjects %}
+				<li class="dropdown">
+					<a href="/{{subject_name}}" class="dropbtn">{{subject_name}}</a>
+					<div class="dropdown-content">
+				        <a href="/{{subject_name}}/{{active_user.username}}">Me</a>
+				        <a href="/{{subject_name}}/{{class_code}}">{{class_code}}</a>
+				        <a href="/{{subject_name}}">Year</a>
+				    </div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="sidenav2">
+		Logged in as: {{active_user.username}}
+	</div>
+ 
+ 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+ 	{% load static %}
+ 	<script src="{% static "main/js/chartjs-plugin-annotation.js" %}"></script>
+	<div id="content" name="content" class="main">
+		<div class="row justify-content-center">
+			<div class="col-8">
+				<!--<h1 class="mt-2">{% block mainheader %}Perth Modern Averages{% endblock %}</h1>-->
+				<hr class="mt-0 mb-4">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+ 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+		function sortTable(n, tableid) {
+		  var table, rows, columns, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+		  table = document.getElementById(tableid);
+		  switching = true;
+		  // Set the sorting direction to ascending:
+		  dir = "asc"; 
+		  /* Make a loop that will continue until
+		  no switching has been done: */
+		  while (switching) {
+		    // Start by saying: no switching is done:
+		    switching = false;
+		    rows = table.rows;
+		    /* Loop through all table rows (except the
+		    first, which contains table headers): */
+		    for (i = 1; i < (rows.length - 1); i++) {
+		      // Start by saying there should be no switching:
+		      shouldSwitch = false;
+		      /* Get the two elements you want to compare,
+		      one from current row and one from the next: */
+			  x = rows[i].getElementsByTagName("TD")[n];
+			  y = rows[i + 1].getElementsByTagName("TD")[n];
+		      /* Check if the two rows should switch place,
+		      based on the direction, asc or desc: */
+		      if (x.innerHTML.toLowerCase() == "100.00%") {
+		      	x_content = "99.999%";
+		      } else {
+		      	x_content = x.innerHTML.toLowerCase();
+		      }
+		      if (y.innerHTML.toLowerCase() == "100.00%") {
+		      	y_content = "99.999%";
+		      } else {
+		      	y_content = y.innerHTML.toLowerCase();
+		      }
+		      if (dir == "asc") {
+		        if (x_content > y_content) {
+		          // If so, mark as a switch and break the loop:
+		          shouldSwitch = true;
+		          break;
+		        }
+		      } else if (dir == "desc") {
+		        if (x_content < y_content) {
+		          // If so, mark as a switch and break the loop:
+		          shouldSwitch = true;
+		          break;
+		        }
+		      }
+		    }
+		    if (shouldSwitch) {
+		      /* If a switch has been marked, make the switch
+		      and mark that a switch has been done: */
+		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		      switching = true;
+		      // Each time a switch is done, increase this count by 1:
+		      switchcount ++; 
+		    } else {
+		      /* If no switching has been done AND the direction is "asc",
+		      set the direction to "desc" and run the while loop again. */
+		      if (switchcount == 0 && dir == "asc") {
+		        dir = "desc";
+		        switching = true;
+		      }
+		    }
+		  }
+		}
+	</script>
+</body>
+</html>

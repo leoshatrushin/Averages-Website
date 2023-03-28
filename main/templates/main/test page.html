@@ -1,0 +1,30 @@
+{% extends 'main/table page.html' %}
+
+{% block before_table %}
+	<h3>Welcome to {{test.name}}'s page</h3>
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		}
+		td {
+			width: 100px;
+		}
+	</style>
+	<table id="{{test.short_name}}Results">
+		<tr>
+			{% for header in headers %}
+				<th onclick="sortTable({{forloop.counter0}}, '{{test.short_name}}Results')">{{header}}</th> 
+			{% endfor %}
+		</tr>
+		{% for class_rank, student, results, average, year_rank in data0 %}
+			<tr>
+				<td>{{class_rank}}</td>
+				{% for result in results %}
+					<td>{{result}}</td>
+				{% endfor %}
+				<td>{{average}}</td>
+				<td>{{year_rank}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<p></p>

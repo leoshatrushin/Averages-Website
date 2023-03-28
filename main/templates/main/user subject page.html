@@ -1,0 +1,292 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+	<h1 class="subject">{{subject.name}}</h1>
+	<br>
+	<style>
+		td {
+			width: 150px;
+			height: 30px;
+			text-align:center;
+			border-bottom: 1px solid #9b9de8;
+		}
+		tr:nth-child(1) {
+			background-color: black !important;
+			color: white;
+		}
+		/*39a2e3, 308ac2*/
+		tr:nth-child(even) {background-color: #d9d9d9;}
+		tr:nth-child(odd) {background-color: #c4c4c4;}
+		tr:nth-child({{user_number}}) {background-color: #1c98a6;}
+		/*9ea0f0*/
+		tr:hover {background-color: #0ff26a;}
+		body {
+			height:100%
+			background-repeat:no-repeat;
+			margin:0;
+			background-attachment: fixed;
+			/*40b6ff, 0071b8*/
+			/*fcfcfc, c9c9c9*/
+			background-image: linear-gradient(#dbfdff, #a6bbbd);
+		}
+		a {
+			/*ebbc13*/
+			color: #0071b8;
+		}
+		.subject {
+			/*767bde*/
+			/*text-shadow:2px 3px #444454;*/
+			font-size:50px;
+		}
+		#box1 {
+			border-radius: 10px;
+			border: 2px solid black;
+			width: 125px;
+			height: 60px;
+			/*696bff*/
+			background: #ffffff;
+			position:relative;
+			font-size:24px;
+		}
+		.linegraphholder {
+			border-radius: 10px;
+			border: 2px solid black;
+			padding: 5px; 
+			width: 420px;
+			height: 400px;
+			/*696bff*/
+			background: #f7f7f7;
+			position:absolute;
+			left:250px;
+			top:75px;
+		}
+		#box2 {
+			border-radius: 10px;
+			border: 2px solid black;
+			width: 500px;
+			height: 80px;
+			/*6859ff*/
+			background: #fcfcfc;
+			position:relative;
+			margin-bottom:5px;
+		}
+		#box4 {
+			border-radius: 10px;
+			border: 2px solid black;
+			width: 490px;
+			height: 280px;
+			/*6859ff*/
+			background: #fcfcfc;
+			position:absolute;
+			left:580px;
+			top:535px;
+			padding:20px;
+		}
+		.top_left {
+			position:absolute;
+			top:0;
+			left:0;
+		}
+		.top_right {
+			position:absolute;
+			top:0;
+			right:0;
+		}
+		.bottom_left {
+			position:absolute;
+			bottom:0;
+			left:0;
+		}
+		.bottom_right {
+			position:absolute;
+			bottom:0;
+			right:0;
+		}
+		.test {
+			font-size: 18px;
+			padding:3px;
+		}
+		.percentage {
+			font-size: 22px;
+			color: #1c1c1c;
+			padding:3px;
+		}
+		.marks {
+			font-size: 14px;
+			color: #474747;	
+			padding:3px;
+		}
+		.weighting {
+			font-size: 14px;
+			color: #474747;
+			padding:3px;
+		}
+		.small {
+			font-size:15px;
+			position:absolute;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+		.big {
+			font-size:30px;
+			position:absolute;
+			bottom:0;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%)
+		}
+		#test {
+			border: 2px solid black;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	<div id="box1">
+		<span class="small">Average</span>
+		<span class="big">{{average}}%</span>
+	</div>
+	<div id="box1" style="margin-top:20px">
+		<span class="small">Rank</span>
+		<span class="big">{{rank}}</span>
+	</div>
+	<div id="box1" style="margin-top:20px">
+		<span class="small">Predicted</span>
+		<span class="big">{{predicted}}%</span>
+	</div>
+	<div id="box1" style="margin-top:20px">
+		<span class="small">Maximum</span>
+		<span class="big">{{maximum_possible_average}}</span>
+	</div>
+	<div class="linegraphholder"><canvas id="canvas" width="400" height="400"></canvas>
+		<script>
+		window.chartColors = {
+		  red: 'rgb(255, 99, 132)',
+		  orange: 'rgb(255, 159, 64)',
+		  yellow: 'rgb(255, 205, 86)',
+		  green: 'rgb(75, 192, 192)',
+		  blue: 'rgb(54, 162, 235)',
+		  purple: 'rgb(153, 102, 255)',
+		  grey: 'rgb(231,233,237)'
+		};
+
+		var ctx = document.getElementById("canvas").getContext("2d");
+
+		var myChart = new Chart(ctx, {
+		  type: 'line',
+		  borderColor: window.chartColors.black,
+		  //#2e2e2e
+		  data: {
+		    labels: [{% for label in linechartlabels %}String('{{label}}'),{% endfor %}],
+		    datasets: [{
+		      label: 'Average',
+		      borderColor: window.chartColors.green,
+		      borderWidth: 3,
+		      fill: false,
+		      lineTension: 0,
+		      data: [{% for data in linechartdata.0 %}{{data}},{% endfor %}],
+			}, {
+			  label: 'Mark',
+			  borderColor: window.chartColors.orange,
+			  borderWidth: 3,
+			  fill: false,
+			  lineTension: 0,
+			  data: [{% for data in linechartdata.1 %}{{data}},{% endfor %}],
+			}]
+		  },
+		  options: {
+		    responsive: true,
+		    tooltips: {
+		      mode: 'index',
+		      intersect: true
+		    },
+		    annotation: {
+		      annotations: [{
+		        type: 'line',
+		        mode: 'horizontal',
+		        scaleID: 'y-axis-0',
+		        value: {{trendlinedata.0.0}},
+		        endValue: {{trendlinedata.0.1}},
+		        borderColor: window.chartColors.green,
+		        borderDash: [5, 5],
+		        borderWidth: 2,
+		      }, {
+		        type: 'line',
+		        mode: 'horizontal',
+		        scaleID: 'y-axis-0',
+		        value: {{trendlinedata.1.0}},
+		        endValue: {{trendlinedata.1.1}},
+		        borderColor: window.chartColors.orange,
+		        borderDash: [5, 5],
+		        borderWidth: 2,
+		      }]
+		    },
+		    scales: {
+	            yAxes: [{
+	                ticks: {
+	                    suggestedMax: 100,
+	                    suggestedMin: 60,
+	                }
+	            }]
+	        }
+		  }
+		});
+		</script>
+	</div>
+	<br><br><br>
+	{% if not marks %}
+		No results yet! Enter your results <a href="update_marks">here</a>
+	{% endif %}
+	{% if marks %}
+		Update your marks <a href="/{{subject.name}}/update_marks">here</a>
+	{% endif %}
+	<br>
+	{% if num != 0 %}
+		<br>
+	{% endif %}
+	{% for test_data in test_datas %}
+		{% if forloop.counter0 == num %}
+			<i>Coming up...</i>
+		{% endif %}
+		<div id="box2">
+			<span class="test">{{test_data.0}}</span>
+			<span class="weighting bottom_left">{{test_data.1}}%</span>
+			{% if forloop.counter <= num %}
+				<span class="percentage top_right">{{test_data.2}}</span>
+				<span class="marks bottom_right">{{test_data.3}}/{{test_data.4}}</span>
+			{% else %}
+				<span class="percentage top_right">-</span>
+				<span class="marks bottom_right">-/{{test_data.4}}</span>
+			{% endif %}
+		</div>
+	{% endfor %}
+	<div id="box4">
+		<h6>Nearby to you:</h6>
+		<table>
+			<tr>
+				<th>Rank</th>
+				<th>Name</th>
+				<th>Average</th>
+			</tr>
+			{% for data in table_data %}
+				<tr>
+					{% for value in data %}
+						<td>{{value}}</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<!--
+	<div id="test"></div>
+	<button onclick="expand()">expand</button>
+	<script type="text/javascript">
+		function expand() {
+    		var div = document.getElementById("test");
+    		if(div) {
+        		div.style.height = "700px";
+        	}
+   		}
+	</script>
+	-->
+{% endblock %}

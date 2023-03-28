@@ -1,0 +1,77 @@
+Module Main
+	Continue <- 'Y'
+	While Continue = 'Y'
+		Input (URL)
+		Input (User)
+		Call URL_Dispatcher(URL, User, HTML, context)
+		Output (HTML, context)
+		Input (Continue)
+	End While
+End Module
+
+Module URL_Dispatcher(URL, User, HTML, context)
+
+  Import(Models)
+
+  Length <- len(URL)
+  Current_Word <- ''
+  Index <- 0
+  For character in URL
+    If character = '/' then
+      Words[Index] <- Current_Word
+      Current_Word <- ''
+      Index <- Index + 1
+    Else
+      Current_Word <- Current_Word + character
+    End If
+  End For
+  Words[Index] <- Current_Word
+  If Index = 0 then
+    If Is_anonymous(User) then
+      Call Choose_Subjects()
+    Else
+      Call Year_12_Cohort_View()
+    End If
+  Else
+    If Index = 1 then
+      If Exists(Subject.Objects.filter(SubjectName = Words[1])) then
+        Call Subject_Page_View(User, Words[1])
+      Else
+        If User.Objects.filter(UserName = Words[1]).exists() then
+          Call User_Page_View(User, Words[1])
+        Else
+          Call Error_Dispatcher(404)
+        End If
+      End If
+    Else
+      If Index = 2 then
+        If Exists(Subject.Objects.filter(SubjectName = Words[1])) then
+          Stop <- False
+          If Test.Objects.filter(TestName = Words[2]).exists() then
+            Call Test_Page_View(User, Words[1], Words[2], HTML, context)
+            Stop <- True
+          End If
+          If Class.Objects.filter(ClassCode = Words[2]).exists() then
+            Call Class_Page_View(User, Words[1], Words[2], HTML, context)
+            Stop <- True
+          End If
+          If User.Objects.filter(UserName = Words[2]).exists() then
+            Call Class_Page_View(User, Words[1], Words[2], HTML, context)
+            Stop <- True
+          End If
+          If Words[2] = 'update_marks' then
+            Call Update_Marks_View(User, Words[1], HTML, context)
+            Stop <- True
+          End If
+          If NOT Stop then
+            Call Error_Dispatcher(404, HTML, context)
+          End If
+        Else
+          Call Error_Dispatcher(404, HTML, context)
+        End If
+      Else
+        Call Error_Dispatcher(404, HTML, context)
+      End If
+    End If
+  End If
+End Module

@@ -1,0 +1,45 @@
+{% extends 'main/table page.html' %}
+
+{% block before_table %}
+	<p>Year average: {{year_average}}</p>
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		}
+		td {
+			width: 100px;
+		}
+		tr:nth-child(even) {background-color: #d9d9d9;}
+		tr:nth-child(odd) {background-color: #c4c4c4;}
+		tr:hover {background-color: #deedda;}
+		.tableholder1 {
+			width:390px;
+			height:500px;
+			background: #696bff;
+			border-radius: 10px;
+			border: 2px solid black;
+		}
+		td:nth-child(1) {background-color: #35db4b}
+	</style>
+	<h3>{{subject.name}}</h3>
+	<table id="{{subject.name}}YearResults">
+		<tr>
+			{% for header in headers %}
+				<th onclick="sortTable({{forloop.counter0}}, '{{subject.name}}YearResults')">{{header}}</th> 
+			{% endfor %}
+		</tr>
+		{% for rank, student, results, average in data0 %}
+			<tr>
+				<td>{{rank}}</td>
+				<td>{{student.username}}</td>
+				{% for result in results %}
+					<td>{{result}}</td>
+				{% endfor %}
+				<td>{{average}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<p></p>
+{% endblock %}
+{% block after_table %}
+{% endblock %}

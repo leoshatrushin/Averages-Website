@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+	{% block before_table %}{% endblock %}
+	<style type="text/css">
+		table, th, td {
+		  border: 1px solid black;
+		}
+		tr:nth-child(1) {
+			background-color: black !important;
+			color: white;
+		}
+		th, td {
+			padding: 1px;
+			text-align: center;
+			vertical-align:center;
+		}
+		tr:nth-child(even) {background-color: #d9d9d9;}
+		tr:nth-child(odd) {background-color: #c4c4c4;}
+		tr:nth-child({{user_number}}) {background-color: #1c98a6;}
+		/*9ea0f0*/
+		tr:hover {background-color: #0ff26a;}
+	</style>
+	<table id="tablePageTable" style="display: inline-block;">
+		{% for row in data %}
+			<tr>
+				{% if forloop.counter is 1 %}
+					{% for value in row %}
+						{% if cell is not '' %}
+							<th>{{value}}</th>
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					{% for value in row %}
+						{% if forloop.counter is 1 %}
+							{% if cell is not '' %}
+								<th>{{value}}</th>
+							{% endif %}
+						{% else %}
+							{% if cell is not '' %}
+								<td>{{value}}</td>
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			</tr>
+		{% endfor %}
+	</table>
+	{% block after_table %}{% endblock %}
+{% endblock %}

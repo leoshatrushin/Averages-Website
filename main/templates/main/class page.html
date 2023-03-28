@@ -1,0 +1,40 @@
+{% extends 'main/table page.html' %}
+
+{% block before_table %}
+	<h3>Welcome to {{class.code}}'s page</h3>
+	<p>
+		Class average: {{class_average}}% (year average is {{year_average}}%)<br>
+		Class rank in the year: {{class_rank}}
+	</p>
+	<p>Your rank in the class: {{rank_in_class}}</p>
+	<p>Highest average: {{class_highest_average}}% rank {{class_highest_rank.value}}</p>
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		}
+		td {
+			width: 100px;
+		}
+		td:nth-child(1) {background-color: #35db4b}
+	</style>
+	<table id="{{class.code}}Results">
+		<tr>
+			{% for header in headers %}
+				<th onclick="sortTable({{forloop.counter0}}, '{{class.code}}Results')">{{header}}</th> 
+			{% endfor %}
+		</tr>
+		{% for class_rank, student, results, average, year_rank in data0 %}
+			<tr>
+				<td>{{class_rank}}</td>
+				{% for result in results %}
+					<td>{{result}}</td>
+				{% endfor %}
+				<td>{{average}}</td>
+				<td>{{year_rank}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<p></p>
+{% endblock %}
+{% block after_table %}
+{% endblock %}

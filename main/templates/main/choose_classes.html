@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block mainheader %}Choose your classes{% endblock %}
+
+{% block content %}
+	<h3>Choose your classes</h3>
+	<form method="post" action="/choose_classes/" class="form-group">
+		{% csrf_token %}
+		<table>
+			<ul>
+				{% for field in form %}
+					<tr>
+						<td><li>{{field.label}}:</li></td>
+						<td>{{field}}</td>
+					</tr>
+				{% endfor %}
+			</ul>
+		</table>
+		<td></td>
+		{% if error is 1 %}
+			<b>Error: Please select one class for each subject</b>
+		{% endif %}
+		<br>
+		<button name="save" type="submit" class="btn btn-success">Save</button>
+	</form>
+{% endblock %}

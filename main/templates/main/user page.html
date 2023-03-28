@@ -1,0 +1,47 @@
+{% extends 'main/table page.html' %}
+
+{% block before_table %}
+	<h3>Welcome to {{user.username}}'s page</h3>
+	<style>
+		tr:nth-child(even) {background-color: #d9d9d9;}
+		tr:nth-child(odd) {background-color: #c4c4c4;}
+		/*9ea0f0*/
+		td:nth-child({{max_tests}}) {background-color: #35db4b;}
+		td:nth-child({{colour}}) {background-color: #467cfa;}
+		td:nth-child({{colourtwo}}) {background-color: #ffac63;}
+		tr:hover {background-color: #deedda;}
+		table, th, td {
+		  border: 1px solid black;
+		}
+		td {
+			width: 100px;
+		}
+		body {
+			background-image: linear-gradient(#dbfdff, #a6bbbd);
+		}
+		#rcorners {
+			border-radius: 10px;
+			border: 2px solid black;
+			padding: 2px; 
+			width: 100px;
+			height: 50px;
+			background: lime;
+			text-align: center;
+			vertical-align: center;
+			display: inline-block;
+		}
+	</style>
+	<p id="rcorners" style="margin-right:50px;">TEA<br>{{TEA}}</p>
+	<p id="rcorners">ATAR<br>{{atar}}</p>
+	<p></p>
+{% endblock %}
+{% block after_table %}
+	<p>
+		Top 6 rank sum: {{sum_6_ranks}}<br>
+		Top 5 rank sum: {{sum_5_ranks}}<br>
+		Top 4 rank sum: {{sum_4_ranks}}<br>
+		Top 6 averages average: {{total_6_average}}<br>
+		Top 5 averages average: {{total_5_average}}<br>
+		Top 4 averages average: {{total_4_average}}<br>
+	</p>
+{% endblock %}

@@ -1,0 +1,1591 @@
+[
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Chemistry",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Physics",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Methods",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "AECHE_2",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "AECHE_1",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$x0fGluVItJvI$2KyAHm0Gdfg0ufr2dpawJtvNuuHl5dVbAwkqrYetYWU=",
+        "last_login": "2019-09-20T04:59:24.563Z",
+        "is_superuser": true,
+        "username": "leoshatrushin",
+        "first_name": "",
+        "last_name": "",
+        "email": "leosha.trushin@student.education.wa.edu.au",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-09-15T04:06:23.954Z",
+        "groups": [
+            [
+                "Chemistry"
+            ],
+            [
+                "Physics"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$EjmXRk12Cf2T$pT256flmfzgLZkNqJXTD4P1sbKuRLbnlm0NJIY+p1dY=",
+        "last_login": "2019-09-19T12:15:42.762Z",
+        "is_superuser": false,
+        "username": "test1",
+        "first_name": "",
+        "last_name": "",
+        "email": "test1@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-09-17T03:58:53.215Z",
+        "groups": [
+            [
+                "Chemistry"
+            ],
+            [
+                "AECHE_1"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$OAPoGp9IZcii$auc1I3eSxmP1iLpV7qQR8FONXsyUcEbuuk6dbEICkYg=",
+        "last_login": "2019-09-17T07:11:56.329Z",
+        "is_superuser": false,
+        "username": "saaiq",
+        "first_name": "",
+        "last_name": "",
+        "email": "saaiq@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-09-17T07:11:55.817Z",
+        "groups": [
+            [
+                "Chemistry"
+            ],
+            [
+                "AECHE_2"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$O8LivKOIHrcK$t9I/UggYYf+b6nT4LBdTsDolB/ewVVcTlNz0x4+IzS4=",
+        "last_login": "2019-09-17T07:12:42.042Z",
+        "is_superuser": false,
+        "username": "colin",
+        "first_name": "",
+        "last_name": "",
+        "email": "colin@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-09-17T07:12:41.480Z",
+        "groups": [
+            [
+                "Chemistry"
+            ],
+            [
+                "AECHE_2"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "73p907iwegwuegp3ra132dipyivkb270",
+    "fields": {
+        "session_data": "ZGE4NmYxMWVlM2M2ZjVhMDYxNTgzN2MyNDliZmMyMTI0ZTdjMGNkODp7Il9hdXRoX3VzZXJfaWQiOiIyMiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNGM1NTJmYjYwNjcyNmUxYjkyN2UxMjUyNWMyOTg4NDM4YjcyYjRmOSJ9",
+        "expire_date": "2019-10-01T07:12:42.047Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "a5jn1tveflltqcjia9abhr7zzc42kha3",
+    "fields": {
+        "session_data": "OTliMmI4ZGI2MzBlM2I4YmRiMjJkY2FlMmRjMTFjYjQ5M2ZlYjlhYjp7Il9hdXRoX3VzZXJfaWQiOiIyMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNDk0YjMyN2M1ZDQ0MzE1MWMyMTJlZjM2NTY4MzVhMmNjMmFmYWY0NSJ9",
+        "expire_date": "2019-10-03T11:58:30.597Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kuugevxdoysnvwxfsdspir9gz2bj8ort",
+    "fields": {
+        "session_data": "MTU2YmI1NjA2NjEwMDJmYmMzMzhmNzc3NTdkNWU1NjY5OTBhYTcyYjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3OTQxNzdkMDJiODZmYWFiZWM2YTg3ZGQ3YjdiZDAxZDhlODBiYjhmIn0=",
+        "expire_date": "2019-10-04T04:59:24.581Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "v4gz05v1z0keh2lpmbcnf3s87m85dxgs",
+    "fields": {
+        "session_data": "MTU2YmI1NjA2NjEwMDJmYmMzMzhmNzc3NTdkNWU1NjY5OTBhYTcyYjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3OTQxNzdkMDJiODZmYWFiZWM2YTg3ZGQ3YjdiZDAxZDhlODBiYjhmIn0=",
+        "expire_date": "2019-09-30T08:11:08.368Z"
+    }
+},
+{
+    "model": "main.subject",
+    "pk": 1,
+    "fields": {
+        "name": "Chemistry",
+        "students": [
+            [
+                "leoshatrushin"
+            ],
+            [
+                "test1"
+            ],
+            [
+                "saaiq"
+            ],
+            [
+                "colin"
+            ]
+        ]
+    }
+},
+{
+    "model": "main.subject",
+    "pk": 2,
+    "fields": {
+        "name": "Physics",
+        "students": [
+            [
+                "leoshatrushin"
+            ]
+        ]
+    }
+},
+{
+    "model": "main.subject",
+    "pk": 3,
+    "fields": {
+        "name": "Methods",
+        "students": []
+    }
+},
+{
+    "model": "main.class",
+    "pk": 1,
+    "fields": {
+        "subject": 1,
+        "code": "AECHE_2",
+        "teacher": "Dr. Reid",
+        "people": 3,
+        "description": null,
+        "students": [
+            [
+                "leoshatrushin"
+            ],
+            [
+                "saaiq"
+            ],
+            [
+                "colin"
+            ]
+        ]
+    }
+},
+{
+    "model": "main.class",
+    "pk": 2,
+    "fields": {
+        "subject": 1,
+        "code": "AECHE_1",
+        "teacher": "Dr. Mr",
+        "people": 1,
+        "description": null,
+        "students": [
+            [
+                "test1"
+            ]
+        ]
+    }
+},
+{
+    "model": "main.test",
+    "pk": 1,
+    "fields": {
+        "name": "Linear motion topic test",
+        "short_name": "Motion test",
+        "marks_out_of": 24,
+        "weighting": "8.00",
+        "order": 1,
+        "subject": 2,
+        "has_happened": true
+    }
+},
+{
+    "model": "main.test",
+    "pk": 2,
+    "fields": {
+        "name": "Linear motion experiment validation",
+        "short_name": "Motion validation",
+        "marks_out_of": 25,
+        "weighting": "6.00",
+        "order": 2,
+        "subject": 2,
+        "has_happened": true
+    }
+},
+{
+    "model": "main.test",
+    "pk": 3,
+    "fields": {
+        "name": "Structure of the atom validation",
+        "short_name": "Atom validation",
+        "marks_out_of": 45,
+        "weighting": "5.00",
+        "order": 1,
+        "subject": 1,
+        "has_happened": true
+    }
+},
+{
+    "model": "main.test",
+    "pk": 4,
+    "fields": {
+        "name": "Topic test 1: Properties and atomic structure",
+        "short_name": "Topic test 1",
+        "marks_out_of": 25,
+        "weighting": "3.75",
+        "order": 2,
+        "subject": 1,
+        "has_happened": true
+    }
+},
+{
+    "model": "main.test",
+    "pk": 5,
+    "fields": {
+        "name": "Flame test practical validation",
+        "short_name": "Flame test validation",
+        "marks_out_of": 25,
+        "weighting": "5.00",
+        "order": 3,
+        "subject": 1,
+        "has_happened": false
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 1,
+    "fields": {
+        "value": "22.0",
+        "test": 1,
+        "student": [
+            "leoshatrushin"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 2,
+    "fields": {
+        "value": "21.0",
+        "test": 2,
+        "student": [
+            "leoshatrushin"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 13,
+    "fields": {
+        "value": "43.0",
+        "test": 3,
+        "student": [
+            "leoshatrushin"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 14,
+    "fields": {
+        "value": "23.0",
+        "test": 4,
+        "student": [
+            "leoshatrushin"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 29,
+    "fields": {
+        "value": "45.0",
+        "test": 3,
+        "student": [
+            "test1"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 30,
+    "fields": {
+        "value": "25.0",
+        "test": 4,
+        "student": [
+            "test1"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 31,
+    "fields": {
+        "value": "40.0",
+        "test": 3,
+        "student": [
+            "saaiq"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 32,
+    "fields": {
+        "value": "20.0",
+        "test": 4,
+        "student": [
+            "saaiq"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 33,
+    "fields": {
+        "value": "41.0",
+        "test": 3,
+        "student": [
+            "colin"
+        ]
+    }
+},
+{
+    "model": "main.mark",
+    "pk": 34,
+    "fields": {
+        "value": "21.0",
+        "test": 4,
+        "student": [
+            "colin"
+        ]
+    }
+},
+{
+    "model": "main.average",
+    "pk": 1,
+    "fields": {
+        "student": [
+            "leoshatrushin"
+        ],
+        "subject": 2,
+        "value": "0.8838095238"
+    }
+},
+{
+    "model": "main.average",
+    "pk": 7,
+    "fields": {
+        "student": [
+            "leoshatrushin"
+        ],
+        "subject": 1,
+        "value": "0.9403174603"
+    }
+},
+{
+    "model": "main.average",
+    "pk": 15,
+    "fields": {
+        "student": [
+            "test1"
+        ],
+        "subject": 1,
+        "value": "1.0000000000"
+    }
+},
+{
+    "model": "main.average",
+    "pk": 16,
+    "fields": {
+        "student": [
+            "saaiq"
+        ],
+        "subject": 1,
+        "value": "0.8507936508"
+    }
+},
+{
+    "model": "main.average",
+    "pk": 17,
+    "fields": {
+        "student": [
+            "colin"
+        ],
+        "subject": 1,
+        "value": "0.8806349206"
+    }
+},
+{
+    "model": "main.rank",
+    "pk": 1,
+    "fields": {
+        "student": [
+            "leoshatrushin"
+        ],
+        "subject": 2,
+        "value": 4
+    }
+},
+{
+    "model": "main.rank",
+    "pk": 6,
+    "fields": {
+        "student": [
+            "leoshatrushin"
+        ],
+        "subject": 1,
+        "value": 2
+    }
+},
+{
+    "model": "main.rank",
+    "pk": 14,
+    "fields": {
+        "student": [
+            "test1"
+        ],
+        "subject": 1,
+        "value": 1
+    }
+},
+{
+    "model": "main.rank",
+    "pk": 15,
+    "fields": {
+        "student": [
+            "saaiq"
+        ],
+        "subject": 1,
+        "value": 4
+    }
+},
+{
+    "model": "main.rank",
+    "pk": 16,
+    "fields": {
+        "student": [
+            "colin"
+        ],
+        "subject": 1,
+        "value": 3
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2019-09-15T04:11:08.880Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "subject"
+        ],
+        "object_id": "1",
+        "object_repr": "Chemistry",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2019-09-15T04:11:12.849Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "subject"
+        ],
+        "object_id": "2",
+        "object_repr": "Physics",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2019-09-15T04:11:15.373Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "subject"
+        ],
+        "object_id": "3",
+        "object_repr": "Methods",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2019-09-15T04:23:57.477Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "asdasd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2019-09-15T04:23:57.491Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "asdasda",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2019-09-15T04:23:57.496Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "asdasdasdasda",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2019-09-15T04:23:57.501Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "asdasdasdasdaasd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2019-09-15T04:28:22.926Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "1",
+        "object_repr": "Chemistry",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2019-09-15T04:28:26.481Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "2",
+        "object_repr": "Physics",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2019-09-15T04:28:30.120Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Methods",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2019-09-15T04:28:33.613Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Methods",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2019-09-15T05:09:52.085Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "defaultuser",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2019-09-15T07:54:01.827Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "1",
+        "object_repr": "Linear motion topic test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2019-09-15T07:54:28.055Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "2",
+        "object_repr": "Linear motion experiment validation",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2019-09-15T10:14:00.205Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "2",
+        "object_repr": "Linear motion experiment validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2019-09-15T10:14:04.556Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "1",
+        "object_repr": "Linear motion topic test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2019-09-15T10:54:09.767Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "2",
+        "object_repr": "Linear motion experiment validation long long long",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2019-09-15T10:54:42.898Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "2",
+        "object_repr": "Linear motion experiment validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2019-09-15T11:17:01.038Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "mark"
+        ],
+        "object_id": "2",
+        "object_repr": "leoshatrushin, Linear motion experiment validation : 10",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"subject\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2019-09-15T11:17:06.950Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "mark"
+        ],
+        "object_id": "1",
+        "object_repr": "leoshatrushin, Linear motion topic test : 10",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"subject\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2019-09-15T12:00:55.837Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "3",
+        "object_repr": "Structure of the atom validation",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2019-09-15T12:02:41.462Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "4",
+        "object_repr": "Topic test 1: Properties and atomic structure",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2019-09-15T12:02:48.470Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "4",
+        "object_repr": "Topic test 1: Properties and atomic structure",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2019-09-15T12:18:23.402Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "3",
+        "object_repr": "Structure of the atom validation",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2019-09-15T12:18:26.369Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "3",
+        "object_repr": "Structure of the atom validation",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2019-09-15T12:18:30.442Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "4",
+        "object_repr": "Topic test 1: Properties and atomic structure",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2019-09-16T01:22:03.546Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "12",
+        "object_repr": "mama",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2019-09-16T07:41:12.286Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "1",
+        "object_repr": "AECHE_2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2019-09-16T07:57:24.561Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "4",
+        "object_repr": "AECHE_2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2019-09-16T08:51:06.369Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "4",
+        "object_repr": "Topic test 1: Properties and atomic structure",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"has_happened\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2019-09-16T08:51:10.438Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "3",
+        "object_repr": "Structure of the atom validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"has_happened\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2019-09-16T08:51:14.395Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "2",
+        "object_repr": "Linear motion experiment validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"has_happened\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2019-09-16T08:51:18.197Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "1",
+        "object_repr": "Linear motion topic test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"has_happened\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2019-09-16T09:06:17.112Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "5",
+        "object_repr": "Flame test practical validation",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2019-09-17T00:31:57.292Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "1",
+        "object_repr": "Linear motion topic test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"short_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2019-09-17T00:32:06.656Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "2",
+        "object_repr": "Linear motion experiment validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"short_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2019-09-17T00:32:27.641Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "3",
+        "object_repr": "Structure of the atom validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"short_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2019-09-17T00:32:37.510Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "4",
+        "object_repr": "Topic test 1: Properties and atomic structure",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"short_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2019-09-17T00:32:53.657Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "test"
+        ],
+        "object_id": "5",
+        "object_repr": "Flame test practical validation",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"short_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2019-09-17T00:38:01.125Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "1",
+        "object_repr": "AECHE_2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"people\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2019-09-17T03:32:43.558Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "2",
+        "object_repr": "AECHE_1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2019-09-17T03:32:48.094Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "1",
+        "object_repr": "AECHE_2",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2019-09-17T03:33:22.162Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "2",
+        "object_repr": "AECHE_1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"students\", \"people\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.561Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "14",
+        "object_repr": "Caleb",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.563Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "15",
+        "object_repr": "Rickson",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.567Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "16",
+        "object_repr": "chris",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.570Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "defaultuser",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.574Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.576Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "17",
+        "object_repr": "test10",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.578Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "8",
+        "object_repr": "test3",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.581Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "9",
+        "object_repr": "test4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.584Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "10",
+        "object_repr": "test7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.587Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "11",
+        "object_repr": "test8",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2019-09-17T03:38:06.590Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "13",
+        "object_repr": "test9",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2019-09-17T03:46:19.458Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "1",
+        "object_repr": "AECHE_2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"people\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2019-09-17T03:46:24.632Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "main",
+            "class"
+        ],
+        "object_id": "2",
+        "object_repr": "AECHE_1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"people\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2019-09-17T03:51:34.925Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "5",
+        "object_repr": "AECHE_1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2019-09-17T03:51:50.408Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "18",
+        "object_repr": "person2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2019-09-17T03:58:27.943Z",
+        "user": [
+            "leoshatrushin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "19",
+        "object_repr": "test1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]

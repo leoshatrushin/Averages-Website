@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+	<style type='text/css'>
+
+		.container input {
+		  width: 80%;
+    	  box-sizing: border-box;		}
+	</style>
+	<h3>Please enter your honest scores</h3>
+	<div class="container">
+		<form method="post" class="form-group">
+			{% csrf_token %}
+			<table>
+			{% for field, marks in data %}
+				<tr>
+					<td>{{field.label}}:</td>
+					<td width=50px>{{field}}</td>
+					<td>/{{marks}}</td>
+				</tr>
+			{% endfor %}
+			<tr>
+				<td></td>
+				<td><button name="save" type="submit" class="btn btn-success">Save</button></td>
+			</tr>
+			</table>
+		</form>
+	</div>
+{% endblock %}

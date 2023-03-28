@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block mainheader %}Choose your subjects{% endblock %}
+
+{% block content %}
+	<h3>Choose your subjects</h3>
+	<form method="post" action="/choose_subjects/" class="form-group">
+		{% csrf_token %}
+		<table>
+			<ul>
+				{% for field in form %}
+					<tr>
+						<td><li>{{field.label}}:</li></td>
+						<td>{{field}}</td>
+					</tr>
+				{% endfor %}
+			</ul>
+		</table>
+		<td></td>
+		<button name="save" type="submit" class="btn btn-success">Save</button>
+	</form>
+{% endblock %}
